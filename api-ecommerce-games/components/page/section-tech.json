@@ -13,7 +13,9 @@
     "techIcons": {
       "type": "component",
       "repeatable": true,
-      "component": "page.tech-icons"
+      "component": "page.tech-icons",
+      "required": true,
+      "min": 5
     }
   }
 }
