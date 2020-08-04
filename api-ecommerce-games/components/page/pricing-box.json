@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_page_pricing_boxes",
+  "info": {
+    "name": "pricingBox",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "totalPrice": {
+      "type": "integer"
+    },
+    "numberInstallments": {
+      "type": "integer"
+    },
+    "priceInstallments": {
+      "type": "integer"
+    },
+    "benefits": {
+      "type": "richtext",
+      "default": "Create item as bullet list",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.button",
+      "required": true
+    }
+  }
+}
