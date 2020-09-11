@@ -21,12 +21,25 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionAboutProject on LandingPage {
+    sectionAboutProject {
+      title
+      description
+      media {
+        alternativeText
+        url
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
       ...header
+      ...sectionAboutProject
     }
   }
+
 `
 
 export default GET_LANDING_PAGE
