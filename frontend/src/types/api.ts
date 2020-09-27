@@ -5,6 +5,10 @@ export type TechIcon = {
   }
 }
 
+export type ConceptsItem = {
+  title: string
+}
+
 export type LogoProps = {
   alternativeText: string
   url: string
@@ -37,9 +41,29 @@ export type SectionTechProps = {
   techIcons: TechIcon[]
 }
 
+export type SectionConceptsProps = {
+  title: string
+  concepts: Array<{
+    title: string
+  }>
+}
+
+export type Modules = {
+  title: string
+  subtitle: string
+  description: string
+}
+
+export type SectionModulesProps = {
+  title: string
+  module: Modules[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
 }
