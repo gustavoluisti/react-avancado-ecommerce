@@ -1,5 +1,5 @@
 const GET_LANDING_PAGE = /* GraphQL*/ `
-  fragment logo on LandingPage {
+fragment logo on LandingPage {
   logo {
     alternativeText
     url
@@ -64,6 +64,45 @@ fragment sectionModules on LandingPage {
   }
 }
 
+fragment sectionAgenda on LandingPage {
+  sectionAgenda {
+    title
+    descrition
+  }
+}
+
+fragment princingBox on LandingPage {
+  pricingBox{
+    totalPrice
+    numberInstallments
+    priceInstallments
+    benefits
+    button{
+      label
+      url
+    }
+  }
+}
+
+fragment sectionAboutUs on LandingPage {
+  sectionAboutUs {
+    title
+    authors{
+      photo{
+        alternativeText
+        url
+      }
+      name
+      role
+      socialLinks{
+        title
+        url
+      }
+      description
+    }
+  }
+}
+
 query GET_LANDING_PAGE {
   landingPage {
     ...logo
@@ -72,9 +111,11 @@ query GET_LANDING_PAGE {
     ...sectionTech
     ...sectionConcepts
     ...sectionModules
+    ...sectionAgenda
+    ...princingBox
+    ...sectionAboutUs
   }
 }
-
 
 `
 
