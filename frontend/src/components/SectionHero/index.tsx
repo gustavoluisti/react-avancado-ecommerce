@@ -27,11 +27,7 @@ const SectionHero = ({ logo, header }: Props) => (
           <S.Title>{header.title}</S.Title>
           <S.Description>{header.description}</S.Description>
           <S.ButtonWrapper>
-            <Button
-              href="https://www.udemy.com/course/react-avancado/?couponCode=PROMOSET20"
-              onClick={onClick}
-              wide
-            >
+            <Button href={header.button.url} onClick={onClick} wide>
               {header.button.label}
             </Button>
           </S.ButtonWrapper>
